@@ -14,7 +14,8 @@ export class ManageComponent implements OnInit {
   videoOrder = '1';
   clips: IClip[] = [];
   activeClip: IClip | null = null;
-  sort$: BehaviorSubject<string>
+  sort$: BehaviorSubject<string>;
+  copiedDocID = '';
 
   constructor(
     public router: Router,
@@ -74,5 +75,17 @@ export class ManageComponent implements OnInit {
         this.clips.splice(i, 1);
       }
     })
+  }
+
+  async copyToClipboard($event: MouseEvent, docID: string | undefined) {
+    $event.preventDefault();
+    if(!docID) return;
+    const url = `${location.origin}/clip/${docID}`;
+    await navigator.clipboard.writeText(url);
+    this.copiedDocID = docID;
+  }
+
+  handleClick($event: MouseEvent) {
+    $event.preventDefault()
   }
 }

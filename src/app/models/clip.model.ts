@@ -7,5 +7,7 @@ title: string;
 fileName: string;
 url: string;
 timestamp: firebase.firestore.FieldValue;
-docID?: string
+docID?: string;
+screenshotURL: string;
+screenshotFileName: string;
 }
