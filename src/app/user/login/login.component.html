@@ -56,7 +56,6 @@
       name="password"
       [(ngModel)]="credentials.password"
       required
-      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
     />
   </div>
   <p *ngIf="password.errors && password.touched && password.dirty" class="text-red-400">

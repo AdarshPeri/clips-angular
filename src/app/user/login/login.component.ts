@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   };
 
   showAlert = false;
-  alertMessage = 'Please wait while your account is being created!';
+  alertMessage = 'Please wait while we log you in!';
   alertColor = 'blue';
   inSubmission = false;
 
