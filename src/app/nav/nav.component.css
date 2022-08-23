@@ -1,0 +1,46 @@
+button {
+    min-width: 90px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 2px solid #6e77fa;
+    font-size: 15px;
+    outline: none;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+button:hover:not(.outline) {
+    filter: brightness(110%);
+}
+
+.secondary {
+    border: 2px solid #6e77fa;
+}
+
+.secondary,
+.secondary:hover,
+.outline.secondary:hover {
+    background: #6e77fa;
+    color: rgb(250, 250, 250);
+}
+
+.outline {
+    background: rgb(255, 255, 255);
+    color: rgb(66, 66, 66);
+}
+
+.tertiary {
+    border: 2px solid rgba(255, 67, 67, 0.98);
+}
+
+.tertiary,
+.tertiary:hover,
+.outline.tertiary:hover {
+    background: rgba(255, 67, 67, 0.98);
+    color: rgb(250, 250, 250);
+}
